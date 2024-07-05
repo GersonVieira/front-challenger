@@ -1,0 +1,51 @@
+.side-bar {
+    height: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.open-size {
+    width: 100px;
+}
+
+.close-size {
+    width: 60px;
+}
+
+.side-icon-menu {
+    cursor: pointer;
+    margin: 12px auto 32px auto;
+}
+
+.side-icon-menu:hover {
+    opacity: 0.6;
+}
+
+.side-icon {
+    cursor: pointer;
+    margin: 12px 12px 0 12px;
+}
+
+.side-menu-button {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid var(--secondary-color);
+}
+
+.side-menu-button-border {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.side-menu-button-border:hover {
+    background-color: aqua;
+}
+
+.inner-icon {
+    margin-left: 8px;
+    margin-right: 8px;
+}

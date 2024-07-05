@@ -1,0 +1,11 @@
+<mat-spinner *ngIf="isLoading" class="spinner"></mat-spinner>
+<div [ngClass]="{'d-none': isLoading}">
+    <div class="list-container">
+        <div *ngFor="let dog of dogsList; let i = index" class="column column-padding">
+            <app-card [dog]="dog" (onCardClick)="openDialog(dog)" />
+        </div>
+    </div>
+    <mat-paginator #paginator [length]="quantDogs" (page)="pageChange($event)" [pageSize]="12"
+        [pageSizeOptions]="[6, 12, 18, 24]" aria-label="Select page">
+    </mat-paginator>
+</div>

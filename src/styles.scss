@@ -1,0 +1,94 @@
+@import "@ng-select/ng-select/themes/default.theme.css";
+// Variable overrides first
+$primary: #900;
+$enable-shadows: false;
+$prefix: "mo-";
+
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+    --primary-color: #5F9EA0;
+    --secondary-color: #7FFFD4;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.main-app-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    // overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.column-1 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 0 12px 0;
+    margin: 12px 0 12px 0;
+
+}
+
+.column-2 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 0 12px 0;
+    margin: 12px 0 12px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-color: black;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 16.6666666667%;
+}
+
+.d-none {
+    display: none;
+}

@@ -1,0 +1,43 @@
+.form {
+    padding: 12px;
+}
+
+.container {
+    border: 1px solid black;
+    width: 300px;
+    height: 100%;
+    overflow: auto;
+}
+
+.main {
+    background-image: url("https://img.freepik.com/free-vector/minimalist-white-abstract-background_23-2148816315.jpg?t=st=1719817136~exp=1719820736~hmac=29a00d80e56e4e07188e5f80e248bc622a05fc2d6396e70d0662bd3eb346ed30&w=1380");
+    background-color: #cccccc;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column-padding {
+    padding: 8px;
+}
+
+.spinner {
+    margin: 250px auto auto;
+}
+
+.bold {
+    font-weight: bold;
+    margin-right: 4px;
+}
+

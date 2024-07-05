@@ -1,0 +1,6 @@
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { StorageService } from './storage.service';
+import { DogListComponent } from './dog-list/dog-list.component';
+
+export const routes: Routes = [{ path: 'dog-list', component: DogListComponent, providers: [StorageService] }, { path: '', redirectTo: '/home', pathMatch: 'full' }, { path: 'home', component: HomeComponent }];

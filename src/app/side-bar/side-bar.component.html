@@ -1,0 +1,17 @@
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="side-bar" (@openClose.done)="onDoneAnimation($event)"
+    (@openClose.start)="onStartAnimation($event)">
+    <mat-icon *ngIf="isOpen" (click)="openSideBar()" aria-hidden="false" aria-label="Example home icon"
+        fontIcon="arrow_forward_ios" class="side-icon-menu" />
+    <mat-icon *ngIf="!isOpen" (click)="openSideBar()" aria-hidden="false" aria-label="Example home icon"
+        fontIcon="arrow_back_ios" class="side-icon-menu" />
+    <div (click)="navigateToHome()" class="side-icon side-menu-button" [ngClass]="{'side-menu-button-border': isContentDisplayed}">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"
+            class="inner-icon" />
+        <div [ngClass]="{'d-none': !isContentDisplayed}">Home</div>
+    </div>
+    <div (click)="navigateToDogList()" class="side-icon side-menu-button" [ngClass]="{'side-menu-button-border': isContentDisplayed}">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="lists"
+            class="inner-icon" />
+        <div [ngClass]="{'d-none': !isContentDisplayed}">Dogs</div>
+    </div>
+</div>
