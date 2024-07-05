@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class StorageService {
+export class DogService {
+
+  private apiURL = 'https://api.thedogapi.com/v1';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,10 +19,10 @@ export class StorageService {
   }
 
   getDogs(pageIndex: number, pageSize: number) {
-    return this.httpClient.get(`https://api.thedogapi.com/v1/breeds?limit=${pageSize}&page=${pageIndex}&has_breeds=0&order=ASC`, { headers: this.getHeaders(), observe: 'response', responseType: 'json', transferCache: false });
+    return this.httpClient.get(`${this.apiURL}/breeds?limit=${pageSize}&page=${pageIndex}&has_breeds=0&order=ASC`, { headers: this.getHeaders(), observe: 'response', responseType: 'json', transferCache: false });
   }
 
   getImage(imageId: string) {
-    return this.httpClient.get(`https://api.thedogapi.com/v1/images/${imageId}`, { headers: this.getHeaders() });
+    return this.httpClient.get(`${this.apiURL}/images/${imageId}`, { headers: this.getHeaders() });
   }
 }
